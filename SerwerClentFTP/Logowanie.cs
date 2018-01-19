@@ -25,14 +25,16 @@ namespace SerwerClentFTP
         {
             WebRequest request = WebRequest.Create("ftp://" + tbIpSerwera.Text);
             request.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
-            request.Credentials = new NetworkCredential("", "");
+            request.Credentials = new NetworkCredential(tblogin.Text, tbHaslo.Text);
             using (var resp = (FtpWebResponse)request.GetResponse())
             {
                 string a = resp.StatusCode.ToString();
             }
             FtpClient.zapislogow("Polaczono " + tblogin.Text);
-            ClientFTP.polaczono = true;
-            this.Close();
+            //ClientFTP.polaczono = true;
+            ClientFTP ClientFTP = new ClientFTP();
+            ClientFTP.Show();
+            //this.Close();
             
         }
 

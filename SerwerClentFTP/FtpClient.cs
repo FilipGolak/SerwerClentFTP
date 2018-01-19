@@ -12,8 +12,8 @@ namespace SerwerClentFTP
     class FtpClient
     {
         private string host;
-        private string userName;
-        private string password;
+        public string userName;
+        public string password;
         private string ftpDirectory;
         private bool downloadCompleted;
         private bool uploadCompleted;
@@ -31,7 +31,7 @@ namespace SerwerClentFTP
             FtpWebRequest request = (FtpWebRequest)WebRequest.Create(new Uri("ftp://" + host + sciezka));
             request.UseBinary = true;
             request.Method = WebRequestMethods.Ftp.ListDirectory;
-            request.Credentials = new NetworkCredential("", "");
+            request.Credentials = new NetworkCredential("filip", "Trabkab3#");
 
             FtpWebResponse response = (FtpWebResponse)request.GetResponse();
             Stream responseStream = response.GetResponseStream();

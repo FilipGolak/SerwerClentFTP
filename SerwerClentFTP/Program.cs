@@ -16,7 +16,7 @@ namespace SerwerClentFTP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ClientFTP());
+            Application.Run(new Logowanie());
         }
     }
 }

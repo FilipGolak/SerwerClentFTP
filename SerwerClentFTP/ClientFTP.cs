@@ -24,7 +24,7 @@ namespace SerwerClentFTP
         public bool dostepne = true;
         public string sciezka_ftp = "";
         public string sciezka_zapis = "";
-        public static bool polaczono;
+        public static bool polaczono = true;
         public ClientFTP()
         {
             InitializeComponent();
@@ -186,9 +186,9 @@ namespace SerwerClentFTP
 
         private void ClientFTP_Shown(object sender, EventArgs e)
         {
-            Logowanie Logowanie = new Logowanie();
-            Logowanie.Show();
-            button2_Click(sender, e);
+            //Logowanie Logowanie = new Logowanie();
+            //Logowanie.Show();
+            //button2_Click(sender, e);
         }
     }
 }
